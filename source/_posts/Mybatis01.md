@@ -32,7 +32,7 @@ typora-root-url: ../
 ```sql
 create database `mybatis`;
 
-`mybatis`
+use `mybatis`;
 
 create table `user` (
   `id` int(20) not null primary key,
@@ -40,7 +40,6 @@ create table `user` (
   `pwd` VARCHAR(30) DEFAULT NULL
 ) engine=innodb default charset=utf8;
 
-`user`
 ```
 
 ##### 2. 创建maven项目，并导入maven依赖
