@@ -78,8 +78,6 @@ typora-root-url: ../
 </update>
 ```
 
-
-
 **<font color="red">注意： 增删改需要提交事务！ </font>**
 
 #### 2. 核心配置
@@ -183,29 +181,111 @@ password=***
 </typeAliases>
 ```
 
+##### 2.4 映射器（mappers）
 
+MapperRegistry: 注册绑定Mapper文件
 
+方式一：【推荐使用】使用相对于类路径的资源引用 
 
+```xml
+<mappers>
+    <mapper resource="com/lics/dao/UserMapper.xml" />
+</mappers>
+```
 
+方式二：使用class文件绑定注册
 
+```xml
+<mappers>
+    <mapper class="com.lics.dao.UserMapper" />
+</mappers>
+```
 
+​	注意点：
 
+- 接口和他的Mapper配置文件必须同名，且在同一个包下！
 
+方式三：使用扫描包进行注册
 
+```xml
+<mappers>
+    <package name="com.lics.dao"/>
+</mappers>
+```
 
+  注意点同方式二。
 
+#### 3. 生命周期和作用域
 
+作用域，和 生命周期，是至关重要的，因为错误的使用会导致非常严重的**并发问题**。
 
+**SqlSessionFactoryBuilder**
 
+- 一旦创建了 SqlSessionFactory，就不再需要它
+- 局部变量
 
+**SqlSessionFactory**：
 
+- 可以想象成数据库连接池
+- SqlSessionFactory 一旦被创建就应该在应用的运行期间一直存在，**没有任何理由丢弃它或重新创建另一个实例**。
+- 最佳作用域是应用作用域，最简单的就是使用**单例模式**或者静态单例模式
 
+**SqlSession**：
 
+- 连接到连接池的一个请求
+- SqlSession 的实例不是线程安全的，因此是不能被共享的，所以它的最佳的作用域是请求或方法作用域
+- 返回一个响应后，就关闭它，否则资源被占用！
 
+#### 4. 解决类的属性名和数据库中字段名不一致的问题
 
+###### 4.1 问题
 
+数据库字段：
 
+![image-dbnames](/images/MyBatis/01-dbnames.png)
 
+类中属性：
 
+```java
+public class User {
+    private int id;
+    private String name;
+    private String password;
+}
+```
 
+查询出现问题：
 
+![image-pwdnull](/images/MyBatis/02-problem-pwdnull.png)
+
+解决办法：
+
+- 起别名（不推荐）
+
+```xml
+<select id="getUserList" resultType="user">
+    select id, name, pwd as password from mybatis.user
+</select>
+```
+
+- **resultMap**
+
+###### 4.2 resultMap
+
+结果集映射
+
+```xml
+<resultMap id="UserMap" type="user">
+    <!-- column：数据库中的字段  property：属性名 -->
+    <result column="id" property="id" />
+    <result column="name" property="name" />
+    <result column="pwd" property="password" />
+</resultMap>
+
+<select id="getUserList" resultMap="UserMap">
+    select * from mybatis.user
+</select>
+```
+
+- `resultMap` 元素是 MyBatis 中最重要最强大的元素
+- ResultMap 的设计思想是，对简单的语句做到零配置，对于复杂一点的语句，只需要描述语句之间的关系就行了。

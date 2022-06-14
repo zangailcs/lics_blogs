@@ -40,6 +40,10 @@ create table `user` (
   `pwd` VARCHAR(30) DEFAULT NULL
 ) engine=innodb default charset=utf8;
 
+INSERT INTO `user` (`id`, `name`, `pwd`) VALUES 
+(1, '张三', '123456'), 
+(2, '李四', '123456'), 
+(3, '王五', '123890'); 
 ```
 
 ##### 2. 创建maven项目，并导入maven依赖
