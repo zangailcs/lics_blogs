@@ -1,10 +1,10 @@
 ---
-title: Mybatis笔记01
+title: Mybatis笔记01--环境搭建
 categories: Mybatis
 typora-root-url: ../
 ---
 
-### Mybatis笔记01
+### Mybatis笔记01--环境搭建
 
 #### 获取Mybatis
 

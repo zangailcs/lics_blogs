@@ -1,10 +1,10 @@
 ---
-title: Mybatis笔记02
+title: Mybatis笔记02--CRUD&核心配置&resultMap
 categories: Mybatis
 typora-root-url: ../
 ---
 
-### Mybatis笔记02
+### Mybatis笔记02--CRUD&核心配置&resultMap
 
 #### 1. CRUD
 

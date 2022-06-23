@@ -1,10 +1,10 @@
 ---
-title: Mybatis笔记03
+title: Mybatis笔记03--日志&分页&注解开发
 categories: Mybatis
 typora-root-url: ../
 ---
 
-### Mybatis笔记03
+### Mybatis笔记03--日志&分页&注解开发
 
 #### 1. 日志
 
@@ -238,5 +238,58 @@ int deleteUserByIdByAnnotations(@Param("id") int id);
 3）假如用${}来编写SQL会出现：恶意SQL注入，对于数据库的数据安全性就没办法保证了。
 4）使用 #{} 可以有效的防止SQL注入，提高系统安全性：
 	预编译的机制。预编译是提前对SQL语句进行预编译，而后再调用SQL，注入的参数就不会再进行SQL编译。而SQL注入是发生在编译的过程中，因为恶意注入了某些特殊字符，最后被编译时SQL时轻而易举的通过，从而导致数据泄露。而预编译机制则可以很好的防止SQL注入。
+```
+
+#### 4. Lombok
+
+使用步骤：
+
+1. 在IDEA中安装Lombok插件！
+
+2. 在项目中导入lombok的jar包
+
+   ```xml
+   <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+   <dependency>
+       <groupId>org.projectlombok</groupId>
+       <artifactId>lombok</artifactId>
+       <version>1.18.22</version>
+   </dependency>
+   ```
+
+3. 在实体类上加注解
+
+```java
+@Getter and @Setter
+@FieldNameConstants
+@ToString
+@EqualsAndHashCode
+@AllArgsConstructor, @RequiredArgsConstructor and @NoArgsConstructor
+@Log, @Log4j, @Log4j2, @Slf4j, @XSlf4j, @CommonsLog, @JBossLog, @Flogger, @CustomLog
+@Data
+@Builder
+@SuperBuilder
+@Singular
+@Delegate
+@Value
+@Accessors
+@Wither
+@With
+@SneakyThrows
+@val
+@var
+experimental @var
+@UtilityClass
+Lombok config system
+Code inspections
+Refactoring actions (lombok and delombok)
+```
+
+说明：
+
+```java
+@Data: 无参构造、get、set、toString、hashCode、equals
+@AllArgsConstructor：有参构造
+@NoArgsConstructor：无参构造
 ```
 
