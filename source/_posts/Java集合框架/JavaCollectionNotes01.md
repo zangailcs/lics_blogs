@@ -1,7 +1,7 @@
 ---
 title: Java集合框架笔记01--Collection基础概念; List及实现类
 categories: Java集合框架
-mathjax: false
+date: 2022-05-01 17:00:00
 typora-root-url: ../
 ---
 

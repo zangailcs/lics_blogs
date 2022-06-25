@@ -1,7 +1,7 @@
 ---
 title: Lambda与Stream笔记02--Stream API
 categories: Lambda表达式;Stream API
-mathjax: false
+date: 2022-05-14 17:00:00
 typora-root-url: ../
 ---
 

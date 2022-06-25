@@ -1,6 +1,7 @@
 ---
 title: Mybatis笔记02--CRUD&核心配置&resultMap
 categories: Mybatis
+date: 2022-06-19 17:00:00
 typora-root-url: ../
 ---
 

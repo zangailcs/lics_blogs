@@ -1,6 +1,7 @@
 ---
 title: 深入浅出MySQL笔记01--基础篇
 categories: MySQL
+date: 2022-04-01 17:00:00
 typora-root-url: ../
 ---
 

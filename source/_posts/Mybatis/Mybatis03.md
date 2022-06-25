@@ -1,6 +1,7 @@
 ---
 title: Mybatis笔记03--日志&分页&注解开发
 categories: Mybatis
+date: 2022-06-22 17:00:00
 typora-root-url: ../
 ---
 

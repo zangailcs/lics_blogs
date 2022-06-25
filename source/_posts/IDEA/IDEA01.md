@@ -1,7 +1,7 @@
 ---
 title: IDEA使用技巧笔记01
 categories: IDEA使用技巧
-mathjax: false
+date: 2022-06-01 17:00:00
 typora-root-url: ../
 ---
 
