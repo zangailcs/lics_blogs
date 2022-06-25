@@ -30,7 +30,7 @@ typora-root-url: ../
 | **2. 文件之间跳转** | ctrl + E | 打开最近查看的文件（Recent Files） | View |
 |  | ctrl + shift + E | 打开最近编辑的文件（Recently Changed Files） | View |
 |  | ctrl + shift + Backspace<br />（**or鼠标侧键**） | 跳转到上次编辑的地方（Last Edit Location） | Navigate |
-|  | <br />（**or鼠标侧键**） | 跳转到下次编辑的地方（Last Edit Location） | Navigate |
+|  | <br />（**or鼠标侧键**） | 跳转到下次编辑的地方（Next Edit Location） | Navigate |
 |  | （ctrl+）alt + 左键头 | 跳转到下次浏览的地方（Forward） | Navigate |
 |  | （ctrl+）alt + 右键头 | 跳转到上次浏览的地方（Back） | Navigate |
 | 利用标签跳转<br />浏览源码等场景 | F11 | 添加/删除书签 |  |
