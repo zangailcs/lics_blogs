@@ -33,4 +33,5 @@ github：https://github.com/spring-projects/spring-framework
 
 #### 1.3 组成 
 
-![Spring的七大模块](/images/Spring/01-01-7module.bmp)
+<img src="https://lics-blogs-1258546254.cos.ap-nanjing.myqcloud.com/images/Spring/Spring01-01-7modules.jpg" width="80%" style="center"/>
+

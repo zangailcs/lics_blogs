@@ -145,7 +145,7 @@ CREATE TABLE `blog`(
    <include refid="if-title-author" />
    ```
 
-##### ForEach![image-04-foreach](/../images/MyBatis/04-foreach.png)
+##### ForEach![image-04-foreach](/..	https://lics-blogs-1258546254.cos.ap-nanjing.myqcloud.com/images/MyBatis/04-foreach.png)
 
 #### 2. 缓存
 

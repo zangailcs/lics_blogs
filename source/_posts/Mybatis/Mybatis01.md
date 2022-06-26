@@ -24,8 +24,6 @@ typora-root-url: ../
 - github: https://github.com/mybatis/mybatis-3/releases
 - 中文文档：https://mybatis.org/mybatis-3/zh/index.html
 
-
-
 #### 搭建环境
 
 ##### 1.  创建数据库

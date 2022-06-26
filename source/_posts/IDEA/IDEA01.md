@@ -15,11 +15,11 @@ typora-root-url: ../
 
 （2）可以设置显示窗口编号：
 
-<img src="/images/IDEA/01_show_tools_numbers.png" width="800px" height="600px" style="center"/>
+<img src="https://lics-blogs-1258546254.cos.ap-nanjing.myqcloud.com/images/IDEA/01_show_tools_numbers.png" width="80%" style="center"/>
 
 ​          设置后，各工具窗口会显示其对应的数字编号，想跳转到某个窗口时，就可以按下“alt+相应的数字键”。
 
-<img src="/images/IDEA/02_tools_windows_ex.png" width="80px" height="300px" style="center"/>
+<img src="https://lics-blogs-1258546254.cos.ap-nanjing.myqcloud.com/images/IDEA/02_tools_windows_ex.png" width="8%" style="center"/>
 
 ##### 2. 跳转相关的快捷键
 
@@ -36,7 +36,7 @@ typora-root-url: ../
 | 利用标签跳转<br />浏览源码等场景 | F11 | 添加/删除书签 |  |
 |  | ctrl + F11 | 添加带助记符号的书签 |  |
 |  | ctrl + 数字键 | 带助记符号的标签之间的跳转 |  |
-| 收藏位置和文件 | 双击Favourites 窗口<br />中的书签列表<br /><img src="/images/IDEA/03_bookmarks.png" width="200px" height="180px" style="center"/> | 也可以跳转到书签对应的代码位置 |  |
+| 收藏位置和文件 | 双击Favourites 窗口<br />中的书签列表<br /><img src="https://lics-blogs-1258546254.cos.ap-nanjing.myqcloud.com/images/IDEA/03_bookmarks.png" width="50%" style="center"/> | 也可以跳转到书签对应的代码位置 |  |
 | **3.  编辑区和文件区<br />之间的跳转** | alt + 1 | 代码编辑区跳转到文件区 |  |
 |  | Esc | 文件区跳转到代码编辑区 |  |
 

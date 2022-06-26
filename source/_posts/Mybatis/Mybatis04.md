@@ -158,8 +158,6 @@ INSERT INTO `student` (`id`, `name`, `tid`) VALUES ('5', '小王', '1');
 
    - ofType 用来指定映射到List或者集合中的pojo类型（泛型中的约束类型）
 
-
-
 注意点：
 
 - 保证SQL的可读性，尽量保证通俗易懂

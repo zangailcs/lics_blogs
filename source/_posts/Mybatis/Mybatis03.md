@@ -17,7 +17,7 @@ typora-root-url: ../
 
 现在：日志工厂！
 
-![image-03-settings-log](/images/MyBatis/03-settings-log.png)
+<img src="https://lics-blogs-1258546254.cos.ap-nanjing.myqcloud.com/images/MyBatis/03-settings-log.png" width="90%"  style="center"/>
 
 - SLF4J 
 - LOG4J 【掌握】 

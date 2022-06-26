@@ -18,7 +18,7 @@ typora-root-url: ../
 
 - ##### Collection体系集合框架：
 
-  <img src="/images/JavaCollectionNotes/01_Collection.png" width="600px" height="300px" style="center"/>`
+  <img src="https://lics-blogs-1258546254.cos.ap-nanjing.myqcloud.com/images/JavaCollectionNotes/01_Collection.png" width="70%" style="center"/>`
   
   
 

@@ -160,7 +160,7 @@ typora-root-url: ../
 
 ##### 字符串函数
 
-##### 		 ![img](/images/MySQL/01_stringFunc.png) 
+<img src="https://lics-blogs-1258546254.cos.ap-nanjing.myqcloud.com/images/MySQL/01_stringFunc.png" width="85%"  style="center"/>
 
 1. LPAD、RPAD   “指定的长度len”为填充后的总长度
 

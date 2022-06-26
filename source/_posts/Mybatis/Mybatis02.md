@@ -243,7 +243,7 @@ MapperRegistry: 注册绑定Mapper文件
 
 数据库字段：
 
-![image-dbnames](/images/MyBatis/01-dbnames.png)
+<img src="https://lics-blogs-1258546254.cos.ap-nanjing.myqcloud.com/images/MyBatis/01-dbnames.png" width="70%"  style="center"/>
 
 类中属性：
 
@@ -257,7 +257,7 @@ public class User {
 
 查询出现问题：
 
-![image-pwdnull](/images/MyBatis/02-problem-pwdnull.png)
+<img src="https://lics-blogs-1258546254.cos.ap-nanjing.myqcloud.com/images/MyBatis/02-problem-pwdnull.png" width="70%"  style="center"/>
 
 解决办法：
 
