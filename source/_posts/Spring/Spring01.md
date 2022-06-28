@@ -90,15 +90,119 @@ public void setUserDao(UserDao userDao) {
 
 3. 在配置文件加载的时候，容器中管理的对象就已经初始化了，无论是否使用。
 
+### 4. Spring配置
 
+#### 4.1 别名
 
+```xml
+<!-- 如果添加了别名，也可以通过别名获取到这个bean -->
+<alias name="user" alias="userNew" />
+```
 
+#### 4.2 Bean的配置
 
+```xml
+<!--
+    id：bean的唯一标识符
+    class：bean对象所对应的全限定名：包名+类型
+    name：也是别名，且name可以同时取多个别名
+ -->
+<bean id="userNew" class="com.lics.pojo.User" name="user2 u2,u3;u4">
+    <constructor-arg type="java.lang.String" value="lics-type" />
+</bean>
+```
 
+#### 4.3 import
 
+一般用于团队开发使用，将多个配置文件，合并为一个
 
+```xml
+<import resource="beans.xml" />
+```
 
+### 5. 依赖注入
 
+#### 5.1 构造器注入
 
+​	见3
 
+#### 5.2 Set方式注入 【重点】
+
+- 依赖注入：本质是Set注入
+  - 依赖：bean对象的创建依赖于容器
+  - 注入：bean对象中的所有属性由容器来注入
+
+```xml
+<bean id="address" class="com.lics.pojo.Address">
+    <property name="address" value="地址" />
+</bean>
+
+<bean id="student" class="com.lics.pojo.Student">
+    <!-- 第一种，普通注入，value  -->
+    <property name="name" value="lics" />
+
+    <!-- 第二种，Bean注入，ref  -->
+    <property name="address" ref="address" />
+
+    <!-- 数组  -->
+    <property name="books">
+        <array>
+            <value>红楼梦</value>
+            <value>西游记</value>
+            <value>水浒传</value>
+            <value>三国演义</value>
+        </array>
+    </property>
+
+    <!-- List  -->
+    <property name="hobbies">
+        <list>
+            <value>听歌</value>
+            <value>看电影</value>
+            <value>敲代码</value>
+        </list>
+    </property>
+
+    <!-- Map  -->
+    <property name="card">
+        <map>
+            <entry key="身份证" value="1234556" />
+            <entry key="银行卡" value="3243241" />
+        </map>
+    </property>
+
+    <!-- Set  -->
+    <property name="games">
+        <set>
+            <value>lol</value>
+            <value>coc</value>
+            <value>bob</value>
+        </set>
+    </property>
+
+    <!-- null  -->
+    <property name="wife">
+        <null/>
+    </property>
+
+    <!-- Properties  -->
+    <property name="info">
+        <props>
+            <prop key="driver">20220628</prop>
+            <prop key="url">nnn</prop>
+            <prop key="username">root</prop>
+            <prop key="password">123</prop>
+        </props>
+    </property>
+</bean>
+```
+
+#### 5.3 拓展方式注入
+
+- p命名空间（property -- set方法）
+- c命名空间（construct-args -- 有参构造）
+
+### 6. bean的作用域
+
+<img src="https://lics-blogs-1258546254.cos.ap-nanjing.myqcloud.com/images/Spring/01-bean-scopes.png" width="85%" style="center"/>
 
