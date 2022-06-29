@@ -1,11 +1,11 @@
 ---
-title: Spring笔记01--动态SQL&缓存
+title: Spring笔记01--简介&依赖注入&bean的作用域
 categories: Spring
 date: 2022-06-26 22:00:00
 typora-root-url: ../
 ---
 
-# Spring笔记01
+# Spring笔记01--简介&依赖注入&bean的作用域
 
 ### 1. Spring
 
@@ -206,3 +206,12 @@ public void setUserDao(UserDao userDao) {
 
 <img src="https://lics-blogs-1258546254.cos.ap-nanjing.myqcloud.com/images/Spring/01-bean-scopes.png" width="85%" style="center"/>
 
+- 单例模式（Spring默认机制）
+
+- 原型模式：每次从容器中getBean的时候，都会产生一个新对象！
+
+  ```xml
+  <bean id="accountService" class="com.something.DefaultAccountService" scope="prototype"/>
+  ```
+
+- 其余的request、session、application等只能在web开发中使用到！
