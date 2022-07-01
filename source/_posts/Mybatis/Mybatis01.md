@@ -176,3 +176,33 @@ INSERT INTO `user` (`id`, `name`, `pwd`) VALUES
     ```
   
   
+  
+  ##### 4. xml文件导出失败：
+  
+  在pom文件中增加以下设置：
+  
+  ```xml
+  <!--maven的资源过滤问题-->
+  <build>
+      <resources>
+          <resource>
+              <directory>src/main/resources</directory>
+              <includes>
+                  <include>**/*.properties</include>
+                  <include>**/*.xml</include>
+              </includes>
+              <filtering>true</filtering>
+          </resource>
+          <resource>
+              <directory>src/main/java</directory>
+              <includes>
+                  <include>**/*.properties</include>
+                  <include>**/*.xml</include>
+              </includes>
+              <filtering>true</filtering>
+          </resource>
+      </resources>
+  </build>
+  ```
+  
+  

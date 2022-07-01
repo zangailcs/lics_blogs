@@ -46,7 +46,7 @@ AOP（Aspect Oriented Programming），面向切面编程。通过预编译方�
 
 
 
-方式一：使用Spring的API接口
+方式一：使用Spring的API接口 【主要是SpringAPI接口实现】
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -75,11 +75,59 @@ AOP（Aspect Oriented Programming），面向切面编程。通过预编译方�
 </beans>
 ```
 
-方式二：自定义类
+```java
+import org.springframework.aop.MethodBeforeAdvice;
 
+import java.lang.reflect.Method;
 
+public class Log implements MethodBeforeAdvice {
+    @Override
+    public void before(Method method, Object[] args, Object target) throws Throwable {
+        System.out.println(target.getClass().getName() + "的" + method.getName() + "被执行了");
+    }
+}
+```
 
+方式二：自定义实现AOP【主要是切面定义】
 
+```xml
+<bean id="diy" class="com.lics.diy.DiyPointCut"/>
 
+<aop:config>
+    <!-- 自定义切面， ref 要引用的类-->
+    <aop:aspect ref="diy">
+        <!-- 切入点 -->
+        <aop:pointcut id="point" expression="execution(* com.lics.service.UserServiceImpl.*(..))"/>
+        <!-- 通知 -->
+        <aop:before method="before" pointcut-ref="point" />
+        <aop:after method="after" pointcut-ref="point" />
+    </aop:aspect>
+</aop:config>
+```
 
+方式三：使用注解实现
 
+```xml
+<bean id="annotationPointCut" class="com.lics.diy.AnnotationPointCut" />
+<!-- 开启注解支持 -->
+<aop:aspectj-autoproxy/>
+```
+
+```java
+@Before("execution(* com.lics.service.UserServiceImpl.*(..))")
+public void before() {
+    System.out.println("*********方法执行前********");
+}
+
+@After("execution(* com.lics.service.UserServiceImpl.*(..))")
+public void after() {
+    System.out.println("*********方法执行后********");
+}
+
+@Around("execution(* com.lics.service.UserServiceImpl.*(..))")
+public void around(ProceedingJoinPoint joinPoint) throws Throwable {
+    System.out.println("*********环绕前********");
+    joinPoint.proceed();
+    System.out.println("*********环绕后********");
+}
+```
