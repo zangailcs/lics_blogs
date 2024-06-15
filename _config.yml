@@ -105,8 +105,8 @@ theme: fluid # keep # next # butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  #repo: https://github.com/zangailcs/zangailcs.github.io.git
-  repo: root@hexo-test:/root/blogs.git
+  repo: https://github.com/zangailcs/zangailcs.github.io.git
+  #repo: root@hexo-test:/root/blogs.git
   branch: master
 
 post_asset_folder: false
