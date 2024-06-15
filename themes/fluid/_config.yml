@@ -1015,3 +1015,7 @@ static_prefix:
   twikoo: https://cdn.jsdelivr.net/npm/twikoo@1/dist/
 
   hint: https://cdn.jsdelivr.net/npm/hint.css@2/
+deploy:
+  type: git
+  repository: git@github.com:zangailcs/zangailcs.github.io.git  #你的仓库地址
+  branch: main
